@@ -1,0 +1,15 @@
+# Ignore all hidden files and directories
+.*
+
+# Except for .gitignore itself
+!.gitignore
+
+# Ignore __pycache__ directories
+__pycache__/
+
+# Ignore compiled Python files
+*.pyc
+*.pyo
+
+# Ignore environment files
+.env
