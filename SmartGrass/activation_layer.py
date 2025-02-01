@@ -7,5 +7,5 @@ class Activation(Layer):
 
     def forward_propagation(self, input):
         self.input = input
-        self.output(self.activation(self.input))
+        self.output = self.activation(self.input)
         return self.output
