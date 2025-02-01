@@ -39,8 +39,10 @@ model.add(FCLayer(10,1))
 model.add(Activation(sigmoid, sigmoid_deriv))
 model.use_loss(mse, mse_deriv)
 
-result = model.predict(x_train)
-print(len(result))
-print(result[0])
+model.fit(x_train, y_train, 1000, 0.1)
+
+predicted = model.predict(x_train)
+print(predicted.reshape(-1))
+print("expected:", y_train)
 
 

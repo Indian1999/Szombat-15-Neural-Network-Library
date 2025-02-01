@@ -28,7 +28,7 @@ class Network:
                 for layer in reversed(self.layers):
                     error = layer.backward_propagation(error, learning_rate)
             error_in_epoch /= samples
-            print(f"Epoch No. {i+1}/{epochs}, loss = {error_in_epoch}")
+            #print(f"Epoch No. {i+1}/{epochs}, loss = {error_in_epoch}")
 
 
     def predict(self, input):
