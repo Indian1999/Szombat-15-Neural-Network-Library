@@ -1,4 +1,9 @@
-import SmartGrass
+from layer import *
+from network import *
+from fclayer import *
+from activation_layer import *
+from activations import *
+from losses import *
 import numpy as np
 
 #Ha az első és az utolsó bit 1 -> 1
@@ -26,4 +31,7 @@ y_train = np.array([
     [[0]],
     [[0]],
 ])
+
+model = Network()
+
 
