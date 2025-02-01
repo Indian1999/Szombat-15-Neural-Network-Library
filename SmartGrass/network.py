@@ -17,5 +17,12 @@ class Network:
     def fit():
         pass
 
-    def predict():
-        pass
+    def predict(self, input):
+        samples = len(input)
+        result = []
+        for i in range(samples):
+            output = input[i]
+            for layer in self.layers:
+                output = layer.forward_propagation(output)
+            result.append(output)
+        return result
