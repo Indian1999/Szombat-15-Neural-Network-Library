@@ -40,6 +40,7 @@ model.add(Activation(sigmoid, sigmoid_deriv))
 model.use_loss(mse, mse_deriv)
 
 result = model.predict(x_train)
-print(result)
+print(len(result))
+print(result[0])
 
 
