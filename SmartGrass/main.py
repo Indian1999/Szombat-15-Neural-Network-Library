@@ -33,5 +33,13 @@ y_train = np.array([
 ])
 
 model = Network()
+model.add(FCLayer(5, 10)) # 5-ös inputból generál egy 10 elemű kimenetet
+model.add(Activation(relu, relu_deriv))
+model.add(FCLayer(10,1))
+model.add(Activation(sigmoid, sigmoid_deriv))
+model.use_loss(mse, mse_deriv)
+
+result = model.predict(x_train)
+print(result)
 
 
